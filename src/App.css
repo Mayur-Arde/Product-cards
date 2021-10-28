@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+h1,
+p {
+  font-family: Lato;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  /* backgr ound-color: blueviolet; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.book-list {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* justify-content: center; */
+  /* align-items: center; */
+  grid-gap: 1rem;
+  /* width: 80vw; */
+  max-width: 1700px;
+  margin: 3rem;
+}
+
+.books {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgb(243, 200, 200);
+  padding: 1.2rem 1rem 1rem;
+  border-radius: 10px;
+  width: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+  margin: 0.12rem 0;
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width: 1200px) {
+  .book-list {
+    grid-template-columns: 1fr 1fr;
+    /* width: 70vw; */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media all and (max-width: 750px) {
+  .book-list {
+    grid-template-columns: 1fr;
+    /* width: 50vw; */
   }
 }

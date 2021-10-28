@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
+// import ReactDOM from 'react-dom';
 import './App.css';
+import Data from './Data';
+import Book from './component/Book'
 
-function App() {
+const Booklist = function () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="book-list">
+      {Data.map((book) => {
+        return <Book key={Data.id} book={book}></Book>;
+      })}
+    </section>
   );
-}
+};
 
-export default App;
+export default Booklist;
